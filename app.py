@@ -8,7 +8,7 @@ from tensorflow.keras.models import load_model
 
 ## load the trained model, scaler pickle, onehot
 
-model = load_model('model.h5', compile=False)
+model = load_model('model.keras', compile=False)
 
 
 ## load the encoders and the scaler
@@ -74,4 +74,5 @@ st.write("probability of Customer churning is : ", prediction_proba)
 if prediction_proba > 0.5:
     st.write('The customer is likely to churn.')
 else:
+
     st.write('The customer is not likely to churn.')
